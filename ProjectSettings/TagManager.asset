@@ -4,10 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - platform
-  - good
-  - zle
-  - slow
+  - protein
   layers:
   - Default
   - TransparentFX
