@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 299343889}
   m_Layer: 0
   m_Name: platform (2)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -372,7 +372,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.38762906, g: 0.5754717, b: 0.4244572, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 672386182}
   - component: {fileID: 672386181}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: scoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 892614695}
   - component: {fileID: 892614694}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: 'Score:'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 901205636}
   m_Layer: 0
   m_Name: platform (1)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -762,10 +762,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1324130391}
   - component: {fileID: 1324130390}
-  - component: {fileID: 1324130389}
   - component: {fileID: 1324130388}
   - component: {fileID: 1324130387}
   - component: {fileID: 1324130392}
+  - component: {fileID: 1324130393}
   m_Layer: 0
   m_Name: hrac
   m_TagString: Player
@@ -802,24 +802,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
---- !u!58 &1324130389
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324130386}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"score","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"scoreText","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.UI.Text,
+      UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"object","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 672386181}
+    - {fileID: 1953216534}
 --- !u!212 &1324130390
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -861,8 +850,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0.33294463, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3e1ef6856f994bf49a3d33b9a7a65e79, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -880,7 +869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324130386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.35, y: -3.94, z: 0}
+  m_LocalPosition: {x: 4.35, y: -2.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -902,12 +891,38 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!61 &1324130393
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324130386}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.015873551, y: 0.0076749325}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.33, y: 3.74}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7268012, y: 3.3436823}
+  m_EdgeRadius: 0
 --- !u!1 &1340573873
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +935,7 @@ GameObject:
   - component: {fileID: 1340573876}
   - component: {fileID: 1340573875}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: 'Lives:'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -980,7 +995,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lifes : '
+  m_Text: 'Lives : '
 --- !u!222 &1340573876
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1001,7 +1016,7 @@ GameObject:
   - component: {fileID: 1671193589}
   - component: {fileID: 1671193588}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: livesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1082,7 +1097,7 @@ GameObject:
   - component: {fileID: 1903205771}
   m_Layer: 0
   m_Name: platform
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1193,8 +1208,8 @@ GameObject:
   - component: {fileID: 1953216535}
   - component: {fileID: 1953216538}
   m_Layer: 0
-  m_Name: dobrenezle
-  m_TagString: Untagged
+  m_Name: dobre
+  m_TagString: good
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1383,7 +1398,7 @@ GameObject:
   - component: {fileID: 2109918532}
   - component: {fileID: 2109918535}
   m_Layer: 0
-  m_Name: zlenedobre
+  m_Name: zle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
