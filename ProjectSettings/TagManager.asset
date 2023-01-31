@@ -6,6 +6,7 @@ TagManager:
   tags:
   - platform
   - good
+  - zle
   layers:
   - Default
   - TransparentFX
