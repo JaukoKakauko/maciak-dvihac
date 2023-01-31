@@ -7,6 +7,7 @@ TagManager:
   - platform
   - good
   - zle
+  - slow
   layers:
   - Default
   - TransparentFX
