@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C99C97AC-F7FA-2BB5-3C56-21D9084574B8}</ProjectGuid>
+    <ProjectGuid>{FCC63900-ECAC-AE66-6E65-51A34E908CB0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.PixelPerfect</AssemblyName>
@@ -725,11 +725,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{D9FE6FC6-D051-0884-0E18-87445B5DCA2D}</Project>
+      <Project>{84D0E73F-7F13-073F-F04D-D3B7D62D8860}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{116A99FF-F2DD-FC57-FC93-19B7804BC291}</Project>
+      <Project>{858CB32F-CCD1-BC4A-68FA-3428382BC2A6}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
